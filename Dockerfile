@@ -5,7 +5,7 @@ Maintainer Wanjo Chan ( http://github.com/wanjochan/ )
 
 #http://npm.taobao.org/mirrors/node/latest
 
-RUN apt update && apt install -y wget libssl-dev
+RUN apt update && apt install -y wget libssl-dev procps
 RUN echo export NODE_VERSION=node-`wget -qO- https://nodejs.org/dist/latest/ | sed -nE 's|.*>node-(.*)\.pkg</a>.*|\1|p'` > /node_env.sh
 
 RUN . /node_env.sh \
